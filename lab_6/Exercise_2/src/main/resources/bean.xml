@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean  id = "product1" class="com.java.Product" scope="prototype">
+    <property name = "id" value ="1"></property>
+    <property name = "name" value ="IPhone"></property>
+    <property name = "color" value ="Black"></property>
+    <property name = "price" value ="1299"></property>
+</bean>
+
+    <bean id="product2" class="com.java.Product" scope="prototype">
+        <constructor-arg type="int" value="1" />       <!-- id -->
+        <constructor-arg type="java.lang.String" value="Sample Product" />  <!-- name -->
+        <constructor-arg type="int" value="100" />     <!-- price -->
+        <constructor-arg type="java.lang.String" value="Red" />  <!-- color -->
+    </bean>
+
+
+    <bean id="product3" class="com.java.Product" scope="singleton">
+        <constructor-arg type="int" value="1" />       <!-- id -->
+        <constructor-arg type="java.lang.String" value="Sample Product" />  <!-- name -->
+        <constructor-arg type="int" value="100" />     <!-- price -->
+        <constructor-arg type="java.lang.String" value="Red" />  <!-- color -->
+    </bean>
+<!-- bean definitions here -->
+
+</beans>
